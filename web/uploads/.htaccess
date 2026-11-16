@@ -1,0 +1,6 @@
+# Uploaded profile photos: serve images only, never run scripts.
+Options -Indexes -ExecCGI
+php_flag engine off
+<FilesMatch "\.(?i:php\d?|phtml|phar|cgi|pl|py|sh)$">
+    Require all denied
+</FilesMatch>

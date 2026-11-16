@@ -1,0 +1,7 @@
+# Apache (XAMPP) settings for the website.
+Options -Indexes
+php_flag display_errors off
+DirectoryIndex index.php
+
+# Code and tools that must never be opened from a browser
+RedirectMatch 404 ^.*/(includes|cli)/

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" font-family="Poppins, sans-serif">
+  <ellipse cx="260" cy="400" rx="230" ry="22" fill="#000" opacity=".06"/>
+  <!-- monitor -->
+  <rect x="120" y="60" width="300" height="200" rx="14" fill="#2d3250"/>
+  <rect x="134" y="74" width="272" height="164" rx="6" fill="#eef8f3"/>
+  <rect x="245" y="260" width="50" height="40" fill="#2d3250"/><rect x="205" y="298" width="130" height="12" rx="6" fill="#2d3250"/>
+  <!-- face being scanned -->
+  <circle cx="270" cy="140" r="34" fill="#f1c7a5"/>
+  <path d="M236 134c0-22 15-34 34-34s34 12 34 32c-9-9-24-12-38-11-12 1-22 6-30 13z" fill="#3b3054"/>
+  <path d="M226 236c6-30 25-44 44-44s38 14 44 44z" fill="#7380ec"/>
+  <g stroke="#1fb57d" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M222 108v-16h16M302 92h16v16M318 172v16h-16M238 188h-16v-16"/>
+  </g>
+  <rect x="214" y="138" width="112" height="3" fill="#1fb57d" opacity=".7"/>
+  <!-- tick badge -->
+  <circle cx="372" cy="104" r="20" fill="#6bc733"/><path d="M362 104l7 7 13-14" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- camera -->
+  <rect x="34" y="96" width="70" height="44" rx="8" fill="#2d3250"/><circle cx="69" cy="118" r="14" fill="#7380ec"/><circle cx="69" cy="118" r="6" fill="#eef8f3"/>
+  <rect x="64" y="140" width="10" height="40" fill="#2d3250"/>
+  <path d="M104 108 L134 96 M104 128 L134 150" stroke="#1fb57d" stroke-width="2" stroke-dasharray="5 5"/>
+  <!-- fingerprint -->
+  <g transform="translate(420 250)">
+    <rect x="0" y="0" width="70" height="90" rx="12" fill="#ffffff" stroke="#d9dbe7" stroke-width="2"/>
+    <g stroke="#1fb57d" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M22 60c0-14 6-22 13-22s13 8 13 22"/><path d="M15 58c0-20 9-30 20-30s20 10 20 30"/><path d="M29 66c0-10 2-16 6-16s6 6 6 18"/>
+    </g>
+  </g>
+  <!-- students -->
+  <g transform="translate(40 300)">
+    <circle cx="20" cy="18" r="14" fill="#f1c7a5"/><rect x="2" y="34" width="36" height="52" rx="14" fill="#2fd6a0"/>
+    <circle cx="72" cy="14" r="14" fill="#c89574"/><rect x="54" y="30" width="36" height="56" rx="14" fill="#7380ec"/>
+  </g>
+  <!-- attendance list -->
+  <g transform="translate(150 330)">
+    <rect width="220" height="62" rx="10" fill="#fff" stroke="#d9dbe7" stroke-width="2"/>
+    <circle cx="20" cy="20" r="7" fill="#6bc733"/><rect x="34" y="16" width="120" height="8" rx="4" fill="#d9dbe7"/>
+    <circle cx="20" cy="42" r="7" fill="#6bc733"/><rect x="34" y="38" width="90" height="8" rx="4" fill="#d9dbe7"/>
+    <text x="168" y="36" font-size="15" font-weight="700" fill="#1fb57d">92%</text>
+  </g>
+</svg>
