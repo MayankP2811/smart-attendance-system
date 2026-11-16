@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.gif binary
+*.mp4 binary
+*.woff2 binary
+*.pdf binary
+# Show the real languages on GitHub (Python + PHP), not the bundled library
+web/assets/vendor/** linguist-vendored
+docs/** linguist-documentation

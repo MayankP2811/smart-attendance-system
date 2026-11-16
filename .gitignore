@@ -1,0 +1,31 @@
+# secrets and local settings
+.env
+*.env.local
+
+# face data and photos: personal data, never commit
+device/data/
+device/captures/
+dataset/
+*.npz
+*.pickle
+*.pkl
+
+# uploaded profile pictures
+web/uploads/*
+!web/uploads/.htaccess
+!web/uploads/.gitkeep
+
+# exports
+attendance_*.xlsx
+attendance_*.csv
+reports/
+
+# Python / tools
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
