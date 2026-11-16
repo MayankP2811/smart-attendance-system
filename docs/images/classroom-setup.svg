@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" font-family="Poppins, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Where the parts go: fingerprint sensor at the door, camera on the classroom wall, Raspberry Pi in between</title>
+  <desc>A teacher scans a finger on the sensor outside the classroom door, and the LCD above it shows the lecture. Inside, a camera
+  above the board photographs all the students at random moments during the lecture. A Raspberry Pi in a box on the wall between
+  them matches the faces and saves the attendance to MySQL, which the website shows to students and faculty.</desc>
+  <defs>
+    <linearGradient id="fov" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fdc9f" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#3fdc9f" stop-opacity=".06"/></linearGradient>
+    <linearGradient id="corr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3e9f4"/><stop offset="1" stop-color="#d3dcec"/></linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1b2a4a" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="1280" height="820" fill="#f6f6f9"/>
+
+  <!-- ===================== corridor ===================== -->
+  <rect x="0" y="0" width="390" height="720" fill="url(#corr)"/>
+  <rect x="0" y="640" width="390" height="80" fill="#c3ccdb"/>
+  <text x="24" y="40" font-size="13" font-weight="700" letter-spacing="2" fill="#5b6b82">CORRIDOR · OUTSIDE THE DOOR</text>
+  <!-- door -->
+  <rect x="44" y="212" width="196" height="430" rx="4" fill="#5b4a3a"/>
+  <rect x="58" y="226" width="168" height="416" fill="#a77b55"/>
+  <rect x="74" y="250" width="136" height="150" rx="4" fill="#b98c64"/><rect x="74" y="420" width="136" height="190" rx="4" fill="#b98c64"/>
+  <rect x="96" y="268" width="92" height="60" rx="4" fill="#cfe4f5" opacity=".9"/>
+  <circle cx="204" cy="440" r="7" fill="#e3c04a"/>
+  <rect x="86" y="176" width="112" height="28" rx="6" fill="#2d3250"/><text x="142" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">ROOM 304</text>
+  <!-- LCD + fingerprint sensor on the wall next to the door -->
+  <g filter="url(#sh)">
+    <rect x="262" y="280" width="116" height="52" rx="6" fill="#0e3a20"/>
+    <rect x="268" y="286" width="104" height="40" rx="3" fill="#1f6b3d"/>
+  </g>
+  <text x="274" y="302" font-family="Menlo, Consolas, monospace" font-size="11" fill="#c8ffd8">Welcome maths</text>
+  <text x="274" y="318" font-family="Menlo, Consolas, monospace" font-size="11" fill="#c8ffd8">Lecture started</text>
+  <g filter="url(#sh)"><rect x="286" y="352" width="66" height="86" rx="12" fill="#2d3250"/></g>
+  <rect x="298" y="364" width="42" height="50" rx="8" fill="#0d1a2f"/>
+  <g transform="translate(305 372)" stroke="#5be3a8" stroke-width="2.4" fill="none" stroke-linecap="round">
+    <path d="M6 30c0-9 3-14 8-14s8 5 8 14"/><path d="M1 28c0-14 6-21 13-21s13 7 13 21"/><path d="M11 34c0-6 1-10 3-10s3 4 3 11"/>
+  </g>
+  <circle cx="319" cy="426" r="4" fill="#3fdc9f"/>
+  <!-- teacher scanning -->
+  <g>
+    <ellipse cx="170" cy="700" rx="62" ry="10" fill="#000" opacity=".08"/>
+    <path d="M128 700l8-150h70l8 150z" fill="#2d3250"/>
+    <path d="M118 560c4-60 26-86 53-86s49 26 53 86z" fill="#7380ec"/>
+    <path d="M206 500c30 0 60-36 84-90" stroke="#7380ec" stroke-width="22" fill="none" stroke-linecap="round"/>
+    <circle cx="294" cy="402" r="11" fill="#e0ac85"/>
+    <rect x="126" y="520" width="40" height="52" rx="4" fill="#f2b33d" transform="rotate(-8 146 546)"/>
+    <circle cx="171" cy="440" r="30" fill="#e0ac85"/>
+    <path d="M140 436c0-26 14-38 31-38s31 12 31 34c-8-9-22-12-36-11-11 1-20 6-26 15z" fill="#3b3054"/>
+  </g>
+  <path d="M300 395 l10 -12 M308 405 l14 -6" stroke="#3fdc9f" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ===================== classroom ===================== -->
+  <polygon points="412,0 1280,0 1280,720 412,720" fill="#efe9de"/>
+  <polygon points="412,0 1280,0 1150,70 540,70" fill="#f7f3ec"/>
+  <polygon points="412,0 540,70 540,300 412,720" fill="#e4dccd"/>
+  <polygon points="1280,0 1150,70 1150,300 1280,720" fill="#e4dccd"/>
+  <rect x="540" y="70" width="610" height="230" fill="#f3eee4"/>
+  <polygon points="540,300 1150,300 1280,720 412,720" fill="#d9cbb5"/>
+  <g stroke="#cbbba1" stroke-width="2">
+    <path d="M620 300 L560 720"/><path d="M720 300 L700 720"/><path d="M845 300 L845 720"/><path d="M970 300 L990 720"/><path d="M1070 300 L1130 720"/>
+    <path d="M512 380 H1176"/><path d="M480 480 H1206"/><path d="M445 600 H1240"/>
+  </g>
+  <!-- back wall: windows, clock, notice board -->
+  <g fill="#cfe4f5" stroke="#fff" stroke-width="4">
+    <rect x="578" y="104" width="110" height="120" rx="4"/><rect x="1004" y="104" width="110" height="120" rx="4"/></g>
+  <path d="M633 104v120M578 164h110M1059 104v120M1004 164h110" stroke="#fff" stroke-width="3"/>
+  <circle cx="975" cy="134" r="18" fill="#fff" stroke="#2d3250" stroke-width="4"/><path d="M975 134v-10M975 134l7 4" stroke="#2d3250" stroke-width="3" stroke-linecap="round"/>
+  <rect x="742" y="160" width="206" height="90" rx="6" fill="#d8b98a"/><g fill="#fff"><rect x="756" y="172" width="54" height="40"/><rect x="822" y="176" width="44" height="58"/><rect x="878" y="170" width="56" height="34"/></g>
+  <!-- the camera's view -->
+  <polygon points="845,96 430,720 1265,720" fill="url(#fov)"/>
+  <path d="M845 96 L430 720 M845 96 L1265 720" stroke="#1fb57d" stroke-width="2" stroke-dasharray="7 6" fill="none"/>
+  <!-- students -->
+    <path d="M623.9 342.0c1.1 -14.6 7.8 -20.2 16.8 -20.2s15.7 5.6 16.8 20.2z" fill="#7380ec"/><circle cx="640.7" cy="309.5" r="9.5" fill="#f1c7a5"/><path d="M631.1 308.4c0 -7.8 4.5 -11.2 9.5 -11.2s9.5 3.4 9.5 10.1c-3.4 -3.4 -7.8 -4.5 -12.3 -3.9c-3.4 0.6 -5.0 2.2 -6.7 5.0z" fill="#2b2b4a"/><circle cx="637.3" cy="310.6" r="1.0" fill="#2d3250"/><circle cx="644.0" cy="310.6" r="1.0" fill="#2d3250"/><path d="M637.9 314.6q2.8 2.2 5.6 0" stroke="#7a4b3a" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+    <path d="M703.6 342.0c1.1 -14.6 7.8 -20.2 16.8 -20.2s15.7 5.6 16.8 20.2z" fill="#2fd6a0"/><path d="M710.4 309.5v12.4h20.0v-12.4z" fill="#1d1d1d"/><circle cx="720.4" cy="309.5" r="9.5" fill="#c89574"/><path d="M710.9 308.4c0 -7.8 4.5 -11.2 9.5 -11.2s9.5 3.4 9.5 10.1c-3.4 -3.4 -7.8 -4.5 -12.3 -3.9c-3.4 0.6 -5.0 2.2 -6.7 5.0z" fill="#1d1d1d"/><circle cx="717.0" cy="310.6" r="1.0" fill="#2d3250"/><circle cx="723.8" cy="310.6" r="1.0" fill="#2d3250"/><path d="M717.6 314.6q2.8 2.2 5.6 0" stroke="#7a4b3a" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+    <path d="M783.3 342.0c1.1 -14.6 7.8 -20.2 16.8 -20.2s15.7 5.6 16.8 20.2z" fill="#f2b33d"/><circle cx="800.1" cy="309.5" r="9.5" fill="#e0ac85"/><path d="M790.6 308.4c0 -7.8 4.5 -11.2 9.5 -11.2s9.5 3.4 9.5 10.1c-3.4 -3.4 -7.8 -4.5 -12.3 -3.9c-3.4 0.6 -5.0 2.2 -6.7 5.0z" fill="#5a3a22"/><circle cx="796.8" cy="310.6" r="1.0" fill="#2d3250"/><circle cx="803.5" cy="310.6" r="1.0" fill="#2d3250"/><path d="M797.3 314.6q2.8 2.2 5.6 0" stroke="#7a4b3a" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+    <path d="M863.1 342.0c1.1 -14.6 7.8 -20.2 16.8 -20.2s15.7 5.6 16.8 20.2z" fill="#e88aa6"/><circle cx="879.9" cy="309.5" r="9.5" fill="#a8714f"/><path d="M870.3 308.4c0 -7.8 4.5 -11.2 9.5 -11.2s9.5 3.4 9.5 10.1c-3.4 -3.4 -7.8 -4.5 -12.3 -3.9c-3.4 0.6 -5.0 2.2 -6.7 5.0z" fill="#3b3054"/><circle cx="876.5" cy="310.6" r="1.0" fill="#2d3250"/><circle cx="883.2" cy="310.6" r="1.0" fill="#2d3250"/><path d="M877.1 314.6q2.8 2.2 5.6 0" stroke="#7a4b3a" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+    <rect x="945.0" y="312.9" width="29.1" height="25.8" rx="4.5" fill="#cfc6b8"/><rect x="945.0" y="312.9" width="29.1" height="5.6" rx="2.8" fill="#b9ae9c"/>
+    <path d="M1022.5 342.0c1.1 -14.6 7.8 -20.2 16.8 -20.2s15.7 5.6 16.8 20.2z" fill="#9b8cf0"/><circle cx="1039.3" cy="309.5" r="9.5" fill="#d9a37c"/><path d="M1029.8 308.4c0 -7.8 4.5 -11.2 9.5 -11.2s9.5 3.4 9.5 10.1c-3.4 -3.4 -7.8 -4.5 -12.3 -3.9c-3.4 0.6 -5.0 2.2 -6.7 5.0z" fill="#4a2f1f"/><circle cx="1036.0" cy="310.6" r="1.0" fill="#2d3250"/><circle cx="1042.7" cy="310.6" r="1.0" fill="#2d3250"/><path d="M1036.5 314.6q2.8 2.2 5.6 0" stroke="#7a4b3a" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+    <rect x="594.8" y="342.0" width="490.4" height="14.6" rx="2.8" fill="#b07a4f"/>
+    <rect x="594.8" y="342.0" width="490.4" height="3.4" rx="1.7" fill="#c99366"/>
+    <rect x="599.1" y="356.6" width="3.4" height="22.4" fill="#7d5636"/>
+    <rect x="678.9" y="356.6" width="3.4" height="22.4" fill="#7d5636"/>
+    <rect x="758.6" y="356.6" width="3.4" height="22.4" fill="#7d5636"/>
+    <rect x="838.3" y="356.6" width="3.4" height="22.4" fill="#7d5636"/>
+    <rect x="918.1" y="356.6" width="3.4" height="22.4" fill="#7d5636"/>
+    <rect x="997.8" y="356.6" width="3.4" height="22.4" fill="#7d5636"/>
+    <rect x="1077.5" y="356.6" width="3.4" height="22.4" fill="#7d5636"/>
+    <path d="M582.3 418.0c1.4 -18.2 9.8 -25.2 21.0 -25.2s19.6 7.0 21.0 25.2z" fill="#4cc38a"/><circle cx="603.3" cy="377.4" r="11.9" fill="#f1c7a5"/><path d="M591.4 376.0c0 -9.8 5.6 -14.0 11.9 -14.0s11.9 4.2 11.9 12.6c-4.2 -4.2 -9.8 -5.6 -15.4 -4.9c-4.2 0.7 -6.3 2.8 -8.4 6.3z" fill="#2b2b4a"/><circle cx="599.1" cy="378.8" r="1.3" fill="#2d3250"/><circle cx="607.5" cy="378.8" r="1.3" fill="#2d3250"/><path d="M599.8 383.7q3.5 2.8 7.0 0" stroke="#7a4b3a" stroke-width="1.0" fill="none" stroke-linecap="round"/>
+    <path d="M677.0 418.0c1.4 -18.2 9.8 -25.2 21.0 -25.2s19.6 7.0 21.0 25.2z" fill="#7380ec"/><path d="M685.5 377.4v15.5h25.0v-15.5z" fill="#1d1d1d"/><circle cx="698.0" cy="377.4" r="11.9" fill="#c89574"/><path d="M686.1 376.0c0 -9.8 5.6 -14.0 11.9 -14.0s11.9 4.2 11.9 12.6c-4.2 -4.2 -9.8 -5.6 -15.4 -4.9c-4.2 0.7 -6.3 2.8 -8.4 6.3z" fill="#1d1d1d"/><circle cx="693.8" cy="378.8" r="1.3" fill="#2d3250"/><circle cx="702.2" cy="378.8" r="1.3" fill="#2d3250"/><path d="M694.5 383.7q3.5 2.8 7.0 0" stroke="#7a4b3a" stroke-width="1.0" fill="none" stroke-linecap="round"/>
+    <path d="M771.7 418.0c1.4 -18.2 9.8 -25.2 21.0 -25.2s19.6 7.0 21.0 25.2z" fill="#2fd6a0"/><circle cx="792.7" cy="377.4" r="11.9" fill="#e0ac85"/><path d="M780.8 376.0c0 -9.8 5.6 -14.0 11.9 -14.0s11.9 4.2 11.9 12.6c-4.2 -4.2 -9.8 -5.6 -15.4 -4.9c-4.2 0.7 -6.3 2.8 -8.4 6.3z" fill="#5a3a22"/><circle cx="788.5" cy="378.8" r="1.3" fill="#2d3250"/><circle cx="796.9" cy="378.8" r="1.3" fill="#2d3250"/><path d="M789.2 383.7q3.5 2.8 7.0 0" stroke="#7a4b3a" stroke-width="1.0" fill="none" stroke-linecap="round"/>
+    <path d="M866.3 418.0c1.4 -18.2 9.8 -25.2 21.0 -25.2s19.6 7.0 21.0 25.2z" fill="#f2b33d"/><circle cx="887.3" cy="377.4" r="11.9" fill="#a8714f"/><path d="M875.4 376.0c0 -9.8 5.6 -14.0 11.9 -14.0s11.9 4.2 11.9 12.6c-4.2 -4.2 -9.8 -5.6 -15.4 -4.9c-4.2 0.7 -6.3 2.8 -8.4 6.3z" fill="#3b3054"/><circle cx="883.1" cy="378.8" r="1.3" fill="#2d3250"/><circle cx="891.5" cy="378.8" r="1.3" fill="#2d3250"/><path d="M883.8 383.7q3.5 2.8 7.0 0" stroke="#7a4b3a" stroke-width="1.0" fill="none" stroke-linecap="round"/>
+    <path d="M961.0 418.0c1.4 -18.2 9.8 -25.2 21.0 -25.2s19.6 7.0 21.0 25.2z" fill="#e88aa6"/><path d="M969.5 377.4v15.5h25.0v-15.5z" fill="#1d1d1d"/><circle cx="982.0" cy="377.4" r="11.9" fill="#f3d0b5"/><path d="M970.1 376.0c0 -9.8 5.6 -14.0 11.9 -14.0s11.9 4.2 11.9 12.6c-4.2 -4.2 -9.8 -5.6 -15.4 -4.9c-4.2 0.7 -6.3 2.8 -8.4 6.3z" fill="#1d1d1d"/><circle cx="977.8" cy="378.8" r="1.3" fill="#2d3250"/><circle cx="986.2" cy="378.8" r="1.3" fill="#2d3250"/><path d="M978.5 383.7q3.5 2.8 7.0 0" stroke="#7a4b3a" stroke-width="1.0" fill="none" stroke-linecap="round"/>
+    <path d="M1055.7 418.0c1.4 -18.2 9.8 -25.2 21.0 -25.2s19.6 7.0 21.0 25.2z" fill="#5aa9e6"/><circle cx="1076.7" cy="377.4" r="11.9" fill="#d9a37c"/><path d="M1064.8 376.0c0 -9.8 5.6 -14.0 11.9 -14.0s11.9 4.2 11.9 12.6c-4.2 -4.2 -9.8 -5.6 -15.4 -4.9c-4.2 0.7 -6.3 2.8 -8.4 6.3z" fill="#4a2f1f"/><circle cx="1072.5" cy="378.8" r="1.3" fill="#2d3250"/><circle cx="1080.9" cy="378.8" r="1.3" fill="#2d3250"/><path d="M1073.2 383.7q3.5 2.8 7.0 0" stroke="#7a4b3a" stroke-width="1.0" fill="none" stroke-linecap="round"/>
+    <rect x="550.0" y="418.0" width="580.0" height="18.2" rx="3.5" fill="#b07a4f"/>
+    <rect x="550.0" y="418.0" width="580.0" height="4.2" rx="2.1" fill="#c99366"/>
+    <rect x="553.9" y="436.2" width="4.2" height="28.0" fill="#7d5636"/>
+    <rect x="648.6" y="436.2" width="4.2" height="28.0" fill="#7d5636"/>
+    <rect x="743.2" y="436.2" width="4.2" height="28.0" fill="#7d5636"/>
+    <rect x="837.9" y="436.2" width="4.2" height="28.0" fill="#7d5636"/>
+    <rect x="932.6" y="436.2" width="4.2" height="28.0" fill="#7d5636"/>
+    <rect x="1027.2" y="436.2" width="4.2" height="28.0" fill="#7d5636"/>
+    <rect x="1121.9" y="436.2" width="4.2" height="28.0" fill="#7d5636"/>
+    <path d="M548.9 512.0c1.7 -22.1 11.9 -30.6 25.5 -30.6s23.8 8.5 25.5 30.6z" fill="#9b8cf0"/><circle cx="574.4" cy="462.7" r="14.4" fill="#f1c7a5"/><path d="M559.9 461.0c0 -11.9 6.8 -17.0 14.4 -17.0s14.4 5.1 14.4 15.3c-5.1 -5.1 -11.9 -6.8 -18.7 -6.0c-5.1 0.8 -7.6 3.4 -10.2 7.6z" fill="#2b2b4a"/><circle cx="569.3" cy="464.4" r="1.5" fill="#2d3250"/><circle cx="579.5" cy="464.4" r="1.5" fill="#2d3250"/><path d="M570.1 470.3q4.2 3.4 8.5 0" stroke="#7a4b3a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <rect x="685.1" y="467.8" width="44.2" height="39.1" rx="6.8" fill="#cfc6b8"/><rect x="685.1" y="467.8" width="44.2" height="8.5" rx="4.2" fill="#b9ae9c"/>
+    <path d="M814.5 512.0c1.7 -22.1 11.9 -30.6 25.5 -30.6s23.8 8.5 25.5 30.6z" fill="#7380ec"/><circle cx="840.0" cy="462.7" r="14.4" fill="#e0ac85"/><path d="M825.5 461.0c0 -11.9 6.8 -17.0 14.4 -17.0s14.4 5.1 14.4 15.3c-5.1 -5.1 -11.9 -6.8 -18.7 -6.0c-5.1 0.8 -7.6 3.4 -10.2 7.6z" fill="#5a3a22"/><circle cx="834.9" cy="464.4" r="1.5" fill="#2d3250"/><circle cx="845.1" cy="464.4" r="1.5" fill="#2d3250"/><path d="M835.8 470.3q4.2 3.4 8.5 0" stroke="#7a4b3a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <path d="M947.3 512.0c1.7 -22.1 11.9 -30.6 25.5 -30.6s23.8 8.5 25.5 30.6z" fill="#2fd6a0"/><circle cx="972.8" cy="462.7" r="14.4" fill="#a8714f"/><path d="M958.4 461.0c0 -11.9 6.8 -17.0 14.4 -17.0s14.4 5.1 14.4 15.3c-5.1 -5.1 -11.9 -6.8 -18.7 -6.0c-5.1 0.8 -7.6 3.4 -10.2 7.6z" fill="#3b3054"/><circle cx="967.7" cy="464.4" r="1.5" fill="#2d3250"/><circle cx="977.9" cy="464.4" r="1.5" fill="#2d3250"/><path d="M968.6 470.3q4.2 3.4 8.5 0" stroke="#7a4b3a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <path d="M1080.1 512.0c1.7 -22.1 11.9 -30.6 25.5 -30.6s23.8 8.5 25.5 30.6z" fill="#f2b33d"/><path d="M1090.4 462.7v18.8h30.3v-18.8z" fill="#1d1d1d"/><circle cx="1105.6" cy="462.7" r="14.4" fill="#f3d0b5"/><path d="M1091.1 461.0c0 -11.9 6.8 -17.0 14.4 -17.0s14.4 5.1 14.4 15.3c-5.1 -5.1 -11.9 -6.8 -18.7 -6.0c-5.1 0.8 -7.6 3.4 -10.2 7.6z" fill="#1d1d1d"/><circle cx="1100.5" cy="464.4" r="1.5" fill="#2d3250"/><circle cx="1110.7" cy="464.4" r="1.5" fill="#2d3250"/><path d="M1101.3 470.3q4.2 3.4 8.5 0" stroke="#7a4b3a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <rect x="502.0" y="512.0" width="676.0" height="22.1" rx="4.2" fill="#b07a4f"/>
+    <rect x="502.0" y="512.0" width="676.0" height="5.1" rx="2.5" fill="#c99366"/>
+    <rect x="505.4" y="534.1" width="5.1" height="34.0" fill="#7d5636"/>
+    <rect x="638.2" y="534.1" width="5.1" height="34.0" fill="#7d5636"/>
+    <rect x="771.1" y="534.1" width="5.1" height="34.0" fill="#7d5636"/>
+    <rect x="903.9" y="534.1" width="5.1" height="34.0" fill="#7d5636"/>
+    <rect x="1036.7" y="534.1" width="5.1" height="34.0" fill="#7d5636"/>
+    <rect x="1169.5" y="534.1" width="5.1" height="34.0" fill="#7d5636"/>
+    <path d="M506.0 622.0c2.0 -26.0 14.0 -36.0 30.0 -36.0s28.0 10.0 30.0 36.0z" fill="#e88aa6"/><circle cx="536.0" cy="564.0" r="17.0" fill="#d9a37c"/><path d="M519.0 562.0c0 -14.0 8.0 -20.0 17.0 -20.0s17.0 6.0 17.0 18.0c-6.0 -6.0 -14.0 -8.0 -22.0 -7.0c-6.0 1.0 -9.0 4.0 -12.0 9.0z" fill="#4a2f1f"/><circle cx="530.0" cy="566.0" r="1.8" fill="#2d3250"/><circle cx="542.0" cy="566.0" r="1.8" fill="#2d3250"/><path d="M531.0 573.0q5.0 4.0 10.0 0" stroke="#7a4b3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M658.0 622.0c2.0 -26.0 14.0 -36.0 30.0 -36.0s28.0 10.0 30.0 36.0z" fill="#5aa9e6"/><circle cx="688.0" cy="564.0" r="17.0" fill="#f1c7a5"/><path d="M671.0 562.0c0 -14.0 8.0 -20.0 17.0 -20.0s17.0 6.0 17.0 18.0c-6.0 -6.0 -14.0 -8.0 -22.0 -7.0c-6.0 1.0 -9.0 4.0 -12.0 9.0z" fill="#2b2b4a"/><circle cx="682.0" cy="566.0" r="1.8" fill="#2d3250"/><circle cx="694.0" cy="566.0" r="1.8" fill="#2d3250"/><path d="M683.0 573.0q5.0 4.0 10.0 0" stroke="#7a4b3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M810.0 622.0c2.0 -26.0 14.0 -36.0 30.0 -36.0s28.0 10.0 30.0 36.0z" fill="#9b8cf0"/><path d="M822.1 564.0v22.1h35.7v-22.1z" fill="#1d1d1d"/><circle cx="840.0" cy="564.0" r="17.0" fill="#c89574"/><path d="M823.0 562.0c0 -14.0 8.0 -20.0 17.0 -20.0s17.0 6.0 17.0 18.0c-6.0 -6.0 -14.0 -8.0 -22.0 -7.0c-6.0 1.0 -9.0 4.0 -12.0 9.0z" fill="#1d1d1d"/><circle cx="834.0" cy="566.0" r="1.8" fill="#2d3250"/><circle cx="846.0" cy="566.0" r="1.8" fill="#2d3250"/><path d="M835.0 573.0q5.0 4.0 10.0 0" stroke="#7a4b3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M962.0 622.0c2.0 -26.0 14.0 -36.0 30.0 -36.0s28.0 10.0 30.0 36.0z" fill="#4cc38a"/><circle cx="992.0" cy="564.0" r="17.0" fill="#e0ac85"/><path d="M975.0 562.0c0 -14.0 8.0 -20.0 17.0 -20.0s17.0 6.0 17.0 18.0c-6.0 -6.0 -14.0 -8.0 -22.0 -7.0c-6.0 1.0 -9.0 4.0 -12.0 9.0z" fill="#5a3a22"/><circle cx="986.0" cy="566.0" r="1.8" fill="#2d3250"/><circle cx="998.0" cy="566.0" r="1.8" fill="#2d3250"/><path d="M987.0 573.0q5.0 4.0 10.0 0" stroke="#7a4b3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M1114.0 622.0c2.0 -26.0 14.0 -36.0 30.0 -36.0s28.0 10.0 30.0 36.0z" fill="#7380ec"/><circle cx="1144.0" cy="564.0" r="17.0" fill="#a8714f"/><path d="M1127.0 562.0c0 -14.0 8.0 -20.0 17.0 -20.0s17.0 6.0 17.0 18.0c-6.0 -6.0 -14.0 -8.0 -22.0 -7.0c-6.0 1.0 -9.0 4.0 -12.0 9.0z" fill="#3b3054"/><circle cx="1138.0" cy="566.0" r="1.8" fill="#2d3250"/><circle cx="1150.0" cy="566.0" r="1.8" fill="#2d3250"/><path d="M1139.0 573.0q5.0 4.0 10.0 0" stroke="#7a4b3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <rect x="454.0" y="622.0" width="772.0" height="26.0" rx="5.0" fill="#b07a4f"/>
+    <rect x="454.0" y="622.0" width="772.0" height="6.0" rx="3.0" fill="#c99366"/>
+    <rect x="457.0" y="648.0" width="6.0" height="40.0" fill="#7d5636"/>
+    <rect x="609.0" y="648.0" width="6.0" height="40.0" fill="#7d5636"/>
+    <rect x="761.0" y="648.0" width="6.0" height="40.0" fill="#7d5636"/>
+    <rect x="913.0" y="648.0" width="6.0" height="40.0" fill="#7d5636"/>
+    <rect x="1065.0" y="648.0" width="6.0" height="40.0" fill="#7d5636"/>
+    <rect x="1217.0" y="648.0" width="6.0" height="40.0" fill="#7d5636"/>
+  <!-- camera on the front wall (the viewer's wall), above the board -->
+  <rect x="780" y="0" width="130" height="16" fill="#2d3250"/>
+  <rect x="838" y="14" width="14" height="40" fill="#2d3250"/>
+  <g filter="url(#sh)">
+    <rect x="800" y="46" width="92" height="56" rx="12" fill="#2d3250"/>
+    <circle cx="846" cy="80" r="21" fill="#7380ec"/><circle cx="846" cy="80" r="10" fill="#0d1a2f"/><circle cx="842" cy="76" r="3" fill="#fff"/>
+    <circle cx="880" cy="58" r="4" fill="#ff5a5a"/>
+  </g>
+
+  <!-- ===================== dividing wall with the Raspberry Pi ===================== -->
+  <rect x="390" y="0" width="22" height="720" fill="#b8c2d3"/>
+  <g filter="url(#sh)">
+    <rect x="356" y="96" width="92" height="76" rx="10" fill="#fff" stroke="#c9d1df"/>
+  </g>
+  <rect x="368" y="108" width="68" height="44" rx="5" fill="#1f6b3d"/>
+  <rect x="392" y="118" width="20" height="20" rx="2" fill="#2b2b2b"/>
+  <g fill="#e3c04a"><circle cx="374" cy="113" r="2"/><circle cx="381" cy="113" r="2"/><circle cx="388" cy="113" r="2"/><circle cx="395" cy="113" r="2"/></g>
+  <text x="402" y="166" text-anchor="middle" font-size="10" font-weight="700" fill="#2d3250">Raspberry Pi</text>
+  <path d="M378 172 V286" stroke="#5b6b82" stroke-width="3" stroke-dasharray="6 5" fill="none"/>
+  <path d="M330 172 V280 M330 172 H378" stroke="#5b6b82" stroke-width="3" stroke-dasharray="6 5" fill="none"/>
+  <path d="M448 120 H780" stroke="#5b6b82" stroke-width="3" stroke-dasharray="6 5" fill="none"/>
+  <!-- wifi to the website -->
+  <g transform="translate(402 70)" fill="none" stroke="#7380ec" stroke-width="3" stroke-linecap="round">
+    <path d="M-14 0a20 20 0 0 1 28 0"/><path d="M-24 -9a34 34 0 0 1 48 0"/></g>
+
+  <!-- ===================== labels ===================== -->
+  <rect x="0" y="720" width="1280" height="100" fill="#f6f6f9"/>
+  <g><rect x="16" y="732" width="302" height="78" rx="14" fill="#fff" stroke="#dde3ee"/><circle cx="40" cy="757" r="14" fill="#1fb57d"/><text x="40" y="762" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">1</text><text x="62" y="762" font-size="14" font-weight="700" fill="#2d3250">Faculty scans a finger at the door</text><text x="62" y="776" font-size="13" fill="#3c4a5f">The finger tells which subject's lecture</text><text x="62" y="796" font-size="13" fill="#3c4a5f">starts. The LCD greets the teacher.</text></g>
+  <g><rect x="332" y="732" width="302" height="78" rx="14" fill="#fff" stroke="#dde3ee"/><circle cx="356" cy="757" r="14" fill="#7380ec"/><text x="356" y="762" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">2</text><text x="378" y="762" font-size="14" font-weight="700" fill="#2d3250">Camera on the wall, inside</text><text x="378" y="776" font-size="13" fill="#3c4a5f">Photographs the whole class at random</text><text x="378" y="796" font-size="13" fill="#3c4a5f">moments in the lecture (6 per hour).</text></g>
+  <g><rect x="648" y="732" width="302" height="78" rx="14" fill="#fff" stroke="#dde3ee"/><circle cx="672" cy="757" r="14" fill="#2d3250"/><text x="672" y="762" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">3</text><text x="694" y="762" font-size="14" font-weight="700" fill="#2d3250">Raspberry Pi in between</text><text x="694" y="776" font-size="13" fill="#3c4a5f">Matches every face and saves the</text><text x="694" y="796" font-size="13" fill="#3c4a5f">result to MySQL after each photo.</text></g>
+  <g><rect x="964" y="732" width="302" height="78" rx="14" fill="#fff" stroke="#dde3ee"/><circle cx="988" cy="757" r="14" fill="#e5484d"/><text x="988" y="762" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">4</text><text x="1010" y="762" font-size="14" font-weight="700" fill="#2d3250">Present = seen in at least 60 %</text><text x="1010" y="776" font-size="13" fill="#3c4a5f">Leaving early shows up as absent.</text><text x="1010" y="796" font-size="13" fill="#3c4a5f">The website updates straight away.</text></g>
+</svg>

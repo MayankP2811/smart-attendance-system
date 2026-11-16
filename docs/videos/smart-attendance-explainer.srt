@@ -1,0 +1,96 @@
+1
+00:00:00,700 --> 00:00:08,964
+This is the Smart Attendance System, a B.E. project by team Innovative_Heads at VCET, Mumbai University.
+
+2
+00:00:09,214 --> 00:00:12,614
+It takes classroom attendance using face recognition.
+
+3
+00:00:14,700 --> 00:00:17,695
+Calling names takes several minutes of every lecture.
+
+4
+00:00:17,945 --> 00:00:20,705
+Friends can answer for students who are not there.
+
+5
+00:00:20,955 --> 00:00:25,187
+And a student can be marked present, then quietly leave a few minutes later.
+
+6
+00:00:26,700 --> 00:00:32,745
+A fingerprint sensor sits outside the classroom door, and every teacher scans a finger while entering.
+
+7
+00:00:32,995 --> 00:00:39,467
+Inside, a camera on the wall faces the whole class, and a Raspberry Pi between them does the processing.
+
+8
+00:00:41,967 --> 00:00:50,082
+Each enrolled finger belongs to a subject, so the system knows which lecture has started, and the LCD greets the teacher.
+
+9
+00:00:51,600 --> 00:00:58,584
+During the lecture, the camera takes six photos of the class at random moments, so nobody can predict the next one.
+
+10
+00:00:58,834 --> 00:01:03,642
+A student counts as present only if seen in at least 60 % of the photos.
+
+11
+00:01:03,892 --> 00:01:07,996
+Someone who is marked at the start and then leaves ends up absent.
+
+12
+00:01:10,900 --> 00:01:18,076
+In each photo, faces are found with HOG detection and turned into 128 numbers.
+
+13
+00:01:18,326 --> 00:01:23,198
+If those numbers are close enough to a known student, the photo counts for that student.
+
+14
+00:01:25,700 --> 00:01:29,335
+After every photo, the result is saved in MySQL.
+
+15
+00:01:29,585 --> 00:01:32,708
+Meanwhile, the LCD counts down the lecture.
+
+16
+00:01:34,200 --> 00:01:39,179
+Students log in to see their attendance in every subject, lecture by lecture.
+
+17
+00:01:39,429 --> 00:01:45,560
+The analytics page warns them early when their average falls below 75 % or 50 %.
+
+18
+00:01:48,067 --> 00:01:55,840
+Faculty see the whole class, including who left early, correct a status or mark a leave, and download the record for Excel.
+
+19
+00:01:56,090 --> 00:01:59,639
+Students send leave applications, and teachers reply.
+
+20
+00:02:02,133 --> 00:02:07,325
+The project won first place at the Oscillations technical paper presentation,
+
+21
+00:02:07,575 --> 00:02:13,428
+and second prizes at Tech-A-Thon, the VNPS project showcase, and Electrowiz.
+
+22
+00:02:16,133 --> 00:02:23,138
+In future, every classroom can connect to one central server, saving time in every lecture across the college.
+
+23
+00:02:23,388 --> 00:02:30,585
+Students could get an app and alerts for parents, and faculty automatic defaulter lists and timetable integration.
+
+24
+00:02:33,267 --> 00:02:38,374
+Built by Mayank Patil, Omkar Joshi, Chandan Thakur and Parth Mhatre.
+

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 450" font-family="Poppins, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Database tables</title>
+  <desc>users, subjects, lectures, attendance (one row per student per lecture), messages and announcements, with their links.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7380ec"/></marker></defs>
+  <rect width="1100" height="450" rx="24" fill="#f6f6f9"/>
+  <g font-size="12.5" fill="#3c4a5f">
+    <g transform="translate(40 40)"><rect width="230" height="250" rx="14" fill="#fff"/><rect width="230" height="40" rx="14" fill="#2d3250"/><rect y="26" width="230" height="14" fill="#2d3250"/>
+      <text x="16" y="26" font-size="15" font-weight="700" fill="#fff">users</text>
+      <text x="16" y="66">id</text><text x="16" y="88">role  (student | faculty)</text><text x="16" y="110">roll_no  ← face label</text>
+      <text x="16" y="132">first_name, last_name</text><text x="16" y="154">email (unique)</text><text x="16" y="176">password_hash (bcrypt)</text>
+      <text x="16" y="198">photo, department, class</text><text x="16" y="220">is_online</text></g>
+    <g transform="translate(330 40)"><rect width="210" height="160" rx="14" fill="#fff"/><rect width="210" height="40" rx="14" fill="#1fb57d"/><rect y="26" width="210" height="14" fill="#1fb57d"/>
+      <text x="16" y="26" font-size="15" font-weight="700" fill="#fff">subjects</text>
+      <text x="16" y="66">id, code, name</text><text x="16" y="88">faculty_id → users</text><text x="16" y="110">finger_id  ← sensor slot</text></g>
+    <g transform="translate(600 40)"><rect width="210" height="160" rx="14" fill="#fff"/><rect width="210" height="40" rx="14" fill="#1fb57d"/><rect y="26" width="210" height="14" fill="#1fb57d"/>
+      <text x="16" y="26" font-size="15" font-weight="700" fill="#fff">lectures</text>
+      <text x="16" y="66">id</text><text x="16" y="88">subject_id → subjects</text><text x="16" y="110">started_at, ended_at</text><text x="16" y="132">photos</text></g>
+    <g transform="translate(860 40)"><rect width="200" height="214" rx="14" fill="#fff" stroke="#6bc733" stroke-width="3"/><rect width="200" height="40" rx="14" fill="#6bc733"/><rect y="26" width="200" height="14" fill="#6bc733"/>
+      <text x="16" y="26" font-size="15" font-weight="700" fill="#12300a">attendance</text>
+      <text x="16" y="66">lecture_id → lectures</text><text x="16" y="88">student_id → users</text><text x="16" y="110">status</text>
+      <text x="28" y="130" font-size="11.5">present | absent | leave</text><text x="16" y="152">seen (photos it was in)</text><text x="16" y="174">source (face | faculty)</text><text x="16" y="196">distance (face match)</text></g>
+    <g transform="translate(330 250)"><rect width="210" height="130" rx="14" fill="#fff"/><rect width="210" height="40" rx="14" fill="#7380ec"/><rect y="26" width="210" height="14" fill="#7380ec"/>
+      <text x="16" y="26" font-size="15" font-weight="700" fill="#fff">messages</text>
+      <text x="16" y="66">sender_id, receiver_id</text><text x="16" y="88">title, body</text><text x="16" y="110">(leave applications)</text></g>
+    <g transform="translate(600 250)"><rect width="210" height="130" rx="14" fill="#fff"/><rect width="210" height="40" rx="14" fill="#7380ec"/><rect y="26" width="210" height="14" fill="#7380ec"/>
+      <text x="16" y="26" font-size="15" font-weight="700" fill="#fff">announcements</text>
+      <text x="16" y="66">faculty_id → users</text><text x="16" y="88">body, created_at</text><text x="16" y="110">(student alerts)</text></g>
+  </g>
+  <g stroke="#7380ec" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M330 124H272"/><path d="M600 124H542"/><path d="M860 104H812"/>
+    <path d="M874 256V420H80V294"/><path d="M330 300H300V262H274"/><path d="M705 382V400H180V294"/>
+  </g>
+  <text x="890" y="304" font-size="12" fill="#2d3250"><tspan font-weight="700">One row per student per lecture</tspan></text>
+  <text x="890" y="322" font-size="12" fill="#5b6b82">any number of lectures,</text>
+  <text x="890" y="340" font-size="12" fill="#5b6b82">% = present ÷ lectures</text>
+</svg>

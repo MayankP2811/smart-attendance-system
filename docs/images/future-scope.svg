@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" font-family="Poppins, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Future scope: many classrooms on one central server</title>
+  <desc>Each classroom has its own door fingerprint sensor, LCD and wall camera. All of them send to one central server with the database. Students, faculty, parents and the department use the website or a mobile app.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5b6b82"/></marker>
+    <filter id="sh"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1b2a4a" flood-opacity=".12"/></filter>
+    <g id="room">
+      <rect width="230" height="118" rx="16" fill="#fff"/>
+      <rect x="16" y="30" width="36" height="72" rx="3" fill="#a77b55"/><circle cx="46" cy="68" r="3" fill="#e3c04a"/>
+      <rect x="58" y="52" width="16" height="22" rx="4" fill="#2d3250"/><circle cx="66" cy="60" r="4" fill="none" stroke="#5be3a8" stroke-width="1.6"/>
+      <rect x="56" y="36" width="22" height="12" rx="2" fill="#1f6b3d"/>
+      <rect x="168" y="24" width="38" height="24" rx="6" fill="#2d3250"/><circle cx="187" cy="36" r="8" fill="#7380ec"/>
+      <path d="M187 48 L120 104 M187 48 L224 104" stroke="#1fb57d" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <g fill="#7380ec"><circle cx="122" cy="88" r="7"/><circle cx="146" cy="88" r="7" fill="#2fd6a0"/><circle cx="170" cy="88" r="7" fill="#f2b33d"/><circle cx="194" cy="88" r="7" fill="#e88aa6"/></g>
+      <rect x="110" y="96" width="100" height="8" rx="3" fill="#b07a4f"/>
+    </g>
+  </defs>
+  <rect width="1200" height="600" rx="24" fill="#f6f6f9"/>
+  <text x="40" y="52" font-size="13" font-weight="700" letter-spacing="2" fill="#1fb57d">FUTURE SCOPE</text>
+  <text x="40" y="82" font-size="24" font-weight="700" fill="#2d3250">From one classroom to the whole college</text>
+
+  <g filter="url(#sh)">
+    <use href="#room" x="40" y="116"/><use href="#room" x="40" y="252"/><use href="#room" x="40" y="388"/>
+  </g>
+  <g font-size="13" font-weight="700" fill="#2d3250"><text x="56" y="138">Room 301</text><text x="56" y="274">Room 302</text><text x="56" y="410">Lab 2</text></g>
+  <text x="40" y="540" font-size="12.5" fill="#5b6b82">Each room: door sensor + LCD + wall camera</text>
+
+  <g stroke="#5b6b82" stroke-width="2.5" fill="none" marker-end="url(#a)">
+    <path d="M272 175 C320 175 320 300 354 300"/><path d="M272 311 H354"/><path d="M272 447 C320 447 320 322 354 322"/>
+  </g>
+  <g filter="url(#sh)" transform="translate(362 218)">
+    <rect width="190" height="190" rx="18" fill="#2d3250"/>
+    <rect x="30" y="26" width="130" height="22" rx="5" fill="#46507a"/><rect x="30" y="56" width="130" height="22" rx="5" fill="#46507a"/>
+    <rect x="30" y="86" width="130" height="22" rx="5" fill="#46507a"/>
+    <g fill="#3fdc9f"><circle cx="44" cy="37" r="4"/><circle cx="44" cy="67" r="4"/><circle cx="44" cy="97" r="4"/></g>
+    <text x="95" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Central server</text>
+    <text x="95" y="160" text-anchor="middle" font-size="11.5" fill="#c9d3e8">face matching · MySQL</text>
+    <text x="95" y="176" text-anchor="middle" font-size="11.5" fill="#c9d3e8">website · API</text>
+  </g>
+  <g stroke="#5b6b82" stroke-width="2.5" fill="none" marker-end="url(#a)"><path d="M552 312 H600"/></g>
+  <g filter="url(#sh)" transform="translate(606 146)">
+    <rect width="150" height="340" rx="16" fill="#fff"/>
+    <text x="75" y="30" text-anchor="middle" font-size="13" font-weight="700" fill="#2d3250">Used by</text>
+    <g font-size="12.5" fill="#3c4a5f" text-anchor="middle">
+      <circle cx="75" cy="62" r="20" fill="#eef8f3"/><circle cx="75" cy="57" r="6" fill="#1fb57d"/><path d="M63 74c1-8 6-11 12-11s11 3 12 11z" fill="#1fb57d"/><text x="75" y="100">Students</text>
+      <circle cx="75" cy="134" r="20" fill="#eef1fd"/><circle cx="75" cy="129" r="6" fill="#7380ec"/><path d="M63 146c1-8 6-11 12-11s11 3 12 11z" fill="#7380ec"/><text x="75" y="172">Faculty</text>
+      <circle cx="75" cy="206" r="20" fill="#fff5e6"/><circle cx="75" cy="201" r="6" fill="#d98a00"/><path d="M63 218c1-8 6-11 12-11s11 3 12 11z" fill="#d98a00"/><text x="75" y="244">Parents</text>
+      <circle cx="75" cy="278" r="20" fill="#f0f1f5"/><circle cx="75" cy="273" r="6" fill="#2d3250"/><path d="M63 290c1-8 6-11 12-11s11 3 12 11z" fill="#2d3250"/><text x="75" y="316">HOD · office</text>
+    </g>
+  </g>
+
+  <g transform="translate(790 110)" font-size="13" fill="#3c4a5f">
+    <rect width="370" height="440" rx="18" fill="#fff" filter="url(#sh)"/>
+    <text x="22" y="36" font-size="15" font-weight="700" fill="#1fb57d">For students</text>
+    <text x="22" y="60">• Mobile app with alerts and announcements</text>
+    <text x="22" y="80">• "Attend 4 more lectures to reach 75 %"</text>
+    <text x="22" y="100">• Leave requests with approve / reject status</text>
+    <text x="22" y="120">• Parents told by SMS or e-mail below 75 %</text>
+    <text x="22" y="156" font-size="15" font-weight="700" fill="#7380ec">For faculty</text>
+    <text x="22" y="180">• Subject and lecture length from the timetable</text>
+    <text x="22" y="200">• Defaulter lists and monthly reports, automatic</text>
+    <text x="22" y="220">• Batch-wise attendance for practicals and labs</text>
+    <text x="22" y="240">• Corrections and approvals from the phone</text>
+    <text x="22" y="276" font-size="15" font-weight="700" fill="#d98a00">For the college</text>
+    <text x="22" y="300">• Every room on one server, one dashboard</text>
+    <text x="22" y="320">• Link with the college ERP / LMS (e.g. Moodle)</text>
+    <text x="22" y="340">• Liveness check so a photo can't fool the camera</text>
+    <text x="22" y="360">• Consent records and automatic photo deletion</text>
+    <text x="22" y="396" font-size="12" fill="#5b6b82">Less time on attendance in every lecture of</text>
+    <text x="22" y="414" font-size="12" fill="#5b6b82">every room, with no queue and no contact.</text>
+  </g>
+</svg>

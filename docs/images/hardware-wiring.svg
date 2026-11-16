@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 470" font-family="Poppins, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Hardware connections</title>
+  <desc>Fingerprint sensor to a USB-to-serial adapter (TX to RX, RX to TX, 5V, GND) plugged into a Raspberry Pi USB port; 16x2 LCD with I2C backpack to pins 2 (5V), 3 (SDA, GPIO2), 5 (SCL, GPIO3) and 6 (GND); camera on the CSI connector or USB.</desc>
+  <rect width="1100" height="470" rx="24" fill="#f6f6f9"/>
+  <!-- Pi -->
+  <g transform="translate(400 90)">
+    <rect width="300" height="290" rx="18" fill="#1f6b3d"/>
+    <rect x="18" y="18" width="264" height="26" rx="4" fill="#11401f"/>
+    <g fill="#e3c04a"><circle cx="34" cy="31" r="5"/><circle cx="52" cy="31" r="5"/><circle cx="70" cy="31" r="5"/><circle cx="88" cy="31" r="5"/></g>
+    <text x="104" y="36" font-size="12" fill="#c8ffd8">GPIO header (pins 2, 3, 5, 6)</text>
+    <rect x="110" y="104" width="80" height="80" rx="6" fill="#2b2b2b"/><text x="150" y="150" text-anchor="middle" font-size="12" fill="#ddd">CPU</text>
+    <text x="150" y="232" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">Raspberry Pi 4B</text>
+    <text x="150" y="256" text-anchor="middle" font-size="12" fill="#c8ffd8">Python station · device/main.py</text>
+    <rect x="-14" y="200" width="28" height="60" rx="4" fill="#bfc5cf"/><text x="-26" y="196" text-anchor="end" font-size="12" fill="#2d3250">USB</text>
+    <rect x="286" y="110" width="28" height="70" rx="4" fill="#d8d8d8"/><text x="326" y="106" font-size="12" fill="#2d3250">CSI / USB</text>
+  </g>
+  <!-- Fingerprint -->
+  <g transform="translate(40 250)">
+    <rect width="190" height="150" rx="16" fill="#fff"/>
+    <rect x="20" y="20" width="52" height="64" rx="10" fill="#2d3250"/>
+    <g transform="translate(26 30)" stroke="#5be3a8" stroke-width="2.5" fill="none" stroke-linecap="round"><path d="M10 38c0-10 4-16 10-16s10 6 10 16"/><path d="M4 36c0-15 7-23 16-23s16 8 16 23"/></g>
+    <text x="84" y="44" font-size="14" font-weight="700" fill="#2d3250">Fingerprint</text>
+    <text x="84" y="62" font-size="12" fill="#5b6b82">sensor (UART)</text>
+    <text x="20" y="112" font-size="11.5" fill="#5b6b82">508 DPI · stores up to</text>
+    <text x="20" y="130" font-size="11.5" fill="#5b6b82">200 fingers · 57600 baud</text>
+  </g>
+  <g transform="translate(250 290)">
+    <rect width="104" height="62" rx="10" fill="#fff" stroke="#c9cfdb"/>
+    <text x="52" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#2d3250">USB–serial</text>
+    <text x="52" y="46" text-anchor="middle" font-size="11" fill="#5b6b82">/dev/ttyUSB0</text>
+  </g>
+  <g stroke="#2d3250" stroke-width="2.5" fill="none">
+    <path d="M230 322h20"/><path d="M354 322h32v-2"/>
+  </g>
+  <g font-size="11" fill="#5b6b82"><text x="232" y="380">TX→RX · RX→TX · 5V · GND</text></g>
+  <!-- LCD -->
+  <g transform="translate(40 60)">
+    <rect width="300" height="150" rx="16" fill="#fff"/>
+    <rect x="20" y="22" width="180" height="56" rx="6" fill="#1f6b3d"/>
+    <text x="32" y="46" font-family="Menlo, Consolas, monospace" font-size="14" fill="#c8ffd8">Welcome maths</text>
+    <text x="32" y="66" font-family="Menlo, Consolas, monospace" font-size="14" fill="#c8ffd8">Lecture started</text>
+    <text x="212" y="44" font-size="14" font-weight="700" fill="#2d3250">16×2 LCD</text>
+    <text x="212" y="62" font-size="12" fill="#5b6b82">I2C 0x27</text>
+    <g font-size="11.5" fill="#3c4a5f">
+      <text x="20" y="104">pin 2 → 5V</text><text x="150" y="104">pin 3 → SDA (GPIO2)</text>
+      <text x="20" y="124">pin 6 → GND</text><text x="150" y="124">pin 5 → SCL (GPIO3)</text>
+    </g>
+  </g>
+  <g stroke="#7380ec" stroke-width="2.5" fill="none"><path d="M340 120H440V100"/></g>
+  <text x="350" y="112" font-size="11" fill="#5b6b82">I2C</text>
+  <!-- Camera -->
+  <g transform="translate(800 150)">
+    <rect width="260" height="150" rx="16" fill="#fff"/>
+    <rect x="22" y="28" width="70" height="70" rx="8" fill="#2d3250"/><circle cx="57" cy="63" r="22" fill="#7380ec"/><circle cx="57" cy="63" r="9" fill="#e9ecff"/>
+    <text x="106" y="52" font-size="14" font-weight="700" fill="#2d3250">Camera</text>
+    <text x="106" y="70" font-size="12" fill="#5b6b82">8 MP Sony IMX219</text>
+    <text x="106" y="88" font-size="12" fill="#5b6b82">or a USB webcam</text>
+    <text x="22" y="128" font-size="11.5" fill="#5b6b82">1080p photos of the classroom</text>
+  </g>
+  <path d="M714 235H800" stroke="#2d3250" stroke-width="2.5"/>
+  <text x="550" y="430" text-anchor="middle" font-size="13" fill="#5b6b82">The station also needs the network (Wi-Fi or Ethernet) to reach the MySQL server.</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" font-family="Poppins, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>What happens in one lecture</title>
+  <desc>1 teacher scans a finger at the door, 2 subject identified and lecture created with everyone absent, 3 the wall camera takes photos at random moments through the lecture, 4 faces in each photo matched to students, 5 a student seen in at least 60 percent of the photos is present, so leaving early counts as absent.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa6b8"/></marker></defs>
+  <rect width="1200" height="300" rx="24" fill="#f6f6f9"/>
+  <g font-size="13" fill="#5b6b82">
+    <g transform="translate(30 40)">
+      <rect width="200" height="220" rx="18" fill="#fff"/>
+      <circle cx="36" cy="38" r="18" fill="#1fb57d"/><text x="36" y="44" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">1</text>
+      <text x="20" y="92" font-size="16" font-weight="700" fill="#2d3250">Teacher scans</text>
+      <text x="20" y="114" font-size="16" font-weight="700" fill="#2d3250">finger</text>
+      <text x="20" y="146">Sensor outside the</text><text x="20" y="166">classroom door, used by</text><text x="20" y="186">every faculty member</text>
+    </g>
+    <g transform="translate(262 40)">
+      <rect width="200" height="220" rx="18" fill="#fff"/>
+      <circle cx="36" cy="38" r="18" fill="#1fb57d"/><text x="36" y="44" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">2</text>
+      <text x="20" y="92" font-size="16" font-weight="700" fill="#2d3250">Subject identified</text>
+      <text x="20" y="124">Finger slot 4 → maths.</text><text x="20" y="144">A lecture is created and</text><text x="20" y="164">every student starts as</text><text x="20" y="184">absent. LCD: Welcome.</text>
+    </g>
+    <g transform="translate(494 40)">
+      <rect width="200" height="220" rx="18" fill="#fff"/>
+      <circle cx="36" cy="38" r="18" fill="#7380ec"/><text x="36" y="44" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">3</text>
+      <text x="20" y="92" font-size="16" font-weight="700" fill="#2d3250">Photos at</text>
+      <text x="20" y="114" font-size="16" font-weight="700" fill="#2d3250">random moments</text>
+      <text x="20" y="146">Wall camera inside, 6</text><text x="20" y="166">photos spread over the</text><text x="20" y="186">whole lecture</text>
+    </g>
+    <g transform="translate(726 40)">
+      <rect width="200" height="220" rx="18" fill="#fff"/>
+      <circle cx="36" cy="38" r="18" fill="#7380ec"/><text x="36" y="44" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">4</text>
+      <text x="20" y="92" font-size="16" font-weight="700" fill="#2d3250">Faces matched</text>
+      <text x="20" y="124">HOG finds faces; each</text><text x="20" y="144">becomes 128 numbers,</text><text x="20" y="164">compared with known</text><text x="20" y="184">students (distance ≤ 0.5)</text>
+    </g>
+    <g transform="translate(958 40)">
+      <rect width="212" height="220" rx="18" fill="#2d3250"/>
+      <circle cx="36" cy="38" r="18" fill="#6bc733"/><text x="36" y="44" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">5</text>
+      <text x="20" y="92" font-size="16" font-weight="700" fill="#fff">Present or absent</text>
+      <text x="20" y="124" fill="#c9d3e8">Present if seen in at</text><text x="20" y="144" fill="#c9d3e8">least 60 % of the photos.</text><text x="20" y="164" fill="#c9d3e8">Left early = absent.</text><text x="20" y="184" fill="#c9d3e8">Saved after every photo.</text>
+    </g>
+  </g>
+  <g stroke="#9aa6b8" stroke-width="2.5" marker-end="url(#a)"><path d="M232 150h26M464 150h26M696 150h26M928 150h26"/></g>
+</svg>
