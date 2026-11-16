@@ -1,0 +1,5 @@
+# Face recognition (HOG detection + dlib 128-number face embeddings).
+# dlib needs CMake and a C++ compiler; on a Raspberry Pi this build takes a while.
+-r requirements.txt
+dlib>=19.24
+face_recognition>=1.3

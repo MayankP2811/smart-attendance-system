@@ -1,0 +1,5 @@
+# Attendance station - core (works on any computer, used by --mock)
+mysql-connector-python>=8.3
+numpy>=1.26
+opencv-python-headless>=4.8
+openpyxl>=3.1

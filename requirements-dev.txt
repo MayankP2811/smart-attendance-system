@@ -1,0 +1,5 @@
+# Tests and linting (no hardware needed)
+-r requirements.txt
+pytest>=8
+requests>=2.31
+pyflakes>=3
