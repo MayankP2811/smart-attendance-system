@@ -1,0 +1,52 @@
+# One-command local demo:  docker compose up -d   then open http://localhost:8080
+# Demo logins: aarav.sharma@example.com / Demo@123 (student),
+#              priya.deshmukh@example.com / Demo@123 (faculty, role "Faculty")
+# Simulate a lecture:  docker compose run --rm station --finger 4 --lecture-seconds 20
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: smart_attendance
+      MYSQL_USER: attendance_app
+      MYSQL_PASSWORD: ${DB_PASSWORD:-local-dev-password}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-local-root-password}
+      TZ: Asia/Kolkata
+    volumes:
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./database/demo_data.sql:/docker-entrypoint-initdb.d/02-demo.sql:ro
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uattendance_app", "-p${DB_PASSWORD:-local-dev-password}"]
+      interval: 5s
+      retries: 30
+
+  web:
+    build: { context: ., dockerfile: docker/web.Dockerfile }
+    ports: ["8080:80"]
+    environment: &dbenv
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_NAME: smart_attendance
+      DB_USER: attendance_app
+      DB_PASSWORD: ${DB_PASSWORD:-local-dev-password}
+      APP_TIMEZONE: Asia/Kolkata
+    volumes:
+      - ./web:/var/www/html
+    # let Apache save profile photos into the mounted folder
+    command: ["bash", "-c", "chown www-data /var/www/html/uploads && exec apache2-foreground"]
+    depends_on:
+      db: { condition: service_healthy }
+
+  station:
+    build: { context: ., dockerfile: docker/station.Dockerfile }
+    profiles: ["demo"]
+    environment:
+      <<: *dbenv
+      SAVE_CAPTURES: "0"
+    stdin_open: true
+    tty: true
+    depends_on:
+      db: { condition: service_healthy }
+
+volumes:
+  db-data:
