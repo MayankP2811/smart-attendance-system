@@ -110,7 +110,7 @@ The same idea scales from one classroom to the whole college: a door sensor, LCD
 | Oscillations'23 — technical paper presentation, VCET with IETE Mumbai Centre (17 March 2023) | **1st place** |
 | Tech-A-Thon'23 — 48-hour hardware hackathon, Thadomal Shahani Engineering College (certificate dated 1 April 2023) | **2nd position** |
 | VNPS'23 — VCET National Level Project Showcase (6 April 2023) | **2nd prize** |
-| Electrowiz 2023 — national level project competition, Datta Meghe College of Engineering, IETE-DMCE (21 April 2023) | **2nd prize** and ₹1,000 |
+| Electrowiz 2023 — national level project competition, Datta Meghe College of Engineering, IETE-DMCE (21 April 2023) | **2nd prize** |
 
 [Certificates](docs/evidence/achievements.pdf) · [The team's paper and presentation](docs/research.md)
 
