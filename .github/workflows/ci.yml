@@ -1,0 +1,45 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_USER: attendance_app
+          MYSQL_PASSWORD: ci-password
+        ports: ["3306:3306"]
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -proot"
+          --health-interval=5s --health-timeout=5s --health-retries=20
+    env:
+      DB_HOST: 127.0.0.1
+      DB_PORT: "3306"
+      DB_USER: attendance_app
+      DB_PASSWORD: ci-password
+      APP_TIMEZONE: Asia/Kolkata
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: pdo_mysql
+      - name: Allow the test user to create test databases
+        run: mysql -h 127.0.0.1 -uroot -proot -e "GRANT ALL ON \`sa\_test\_%\`.* TO 'attendance_app'@'%'; FLUSH PRIVILEGES;"
+      - name: Install Python packages
+        run: pip install -r requirements-dev.txt
+      - name: Lint
+        run: |
+          python -m pyflakes device tests scripts
+          find web -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: Tests
+        run: python -m pytest -v
